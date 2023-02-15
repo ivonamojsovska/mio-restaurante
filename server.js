@@ -4,13 +4,14 @@ const app = express();
 let PORT = 3000;
 
 app.get('/', (req, res) => {
-    res.send('hi');
+    res.render('homePage.ejs');
 })
 app.get('/company-history', (reg, res) => {
     res.send('Company History')
 })
-app.get('/past-work', (reg, res) => {
-    res.send('Past Work')
+//past work row
+app.get('/locations', (reg, res) => {
+    res.send('Locations')
 })
 app.get('/staff-page', (reg, res) => {
     res.send('Staff Page')
