@@ -9,6 +9,18 @@ app.get('/', (req, res) => {
 app.get('/company-history', (reg, res) => {
     res.send('Company History')
 })
+app.get('/past-work', (reg, res) => {
+    res.send('Past Work')
+})
+app.get('/staff-page', (reg, res) => {
+    res.send('Staff Page')
+})
+app.get('/contact-page', (reg, res) => {
+    res.send('Contact Page')
+})
+app.get('/links-page', (reg, res) => {
+    res.send('Links Page')
+})
 
 app.listen(PORT, () => {
     console.log('listening');
