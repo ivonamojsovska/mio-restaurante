@@ -3,10 +3,20 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/nav.ejs') %>
-    
-    <header>
-      <%- include('./partials/header.ejs') %>
-    </header>
 
+    <header><%- include('./partials/header.ejs') %></header>
+    <main>
+      <h3 class="text-center">These are our locations:</h3>
+      <ul class="text-center list-unstyled">
+        <% for(let i = 0; i < ourLocation.length; i++){ %>
+        <li>
+          <a href="#" class="text-decoration-none text-reset"
+            ><%= i +1 %> : <%= ourLocation[i].city %>, <%= ourLocation[i].state
+            %></a
+          >
+        </li>
+        <% } %>
+      </ul>
+    </main>
   </body>
 </html>

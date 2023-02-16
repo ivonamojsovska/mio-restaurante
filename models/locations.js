@@ -1,16 +1,22 @@
 const locations = [{
-    "city": "Los angeles",
-    "state": "California",
+    city: "Los angeles",
+    state: "California",
 },
 {
-    "city": "Columbus",
-    "state": "Ohio",
+    city: "Columbus",
+    state: "Ohio",
 },
 {
-    "city": "New York City",
-    "state": "New York",
+    city: "New York City",
+    state: "New York",
 },
 {
-    "city": "Miami",
-    "state": "Florida",
+    city: "Miami",
+    state: "Florida",
+},
+{
+    city: "Chicago",
+    state: "Ilinois",
 }]
+
+module.exports = locations

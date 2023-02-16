@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <header><%- include('./partials/header.ejs') %></header>
+    <main class="text-center">
+      <h4>Do you want to meet our amazing staff?</h4>
+      <h5>Representing:</h5>
+      <ul class="list-unstyled">
+        <% for(let i = 0; i < staff.length; i++){ %>
+        <li>
+          <%= staff[i].firstName %> <%= staff[i].lastName %> at position <%=
+          staff[i].position %>
+        </li>
+        <% } %>
+      </ul>
+    </main>
+  </body>
+</html>
