@@ -2,9 +2,10 @@ const express = require('express')
 const app = express();
 const locations = require('./models/locations.js')
 const staff = require('./models/staffPage')
+const menu = require('./models/menuPage')
 
 let PORT = 3000;
-
+app.set('view engine', 'ejs')
 app.use(express.static("public"))
 
 app.get('/', (req, res) => {
@@ -28,8 +29,10 @@ app.get('/staffpage', (reg, res) => {
 app.get('/contactpage', (reg, res) => {
     res.render('contactPage.ejs')
 })
-app.get('/links-page', (reg, res) => {
-    res.send('Links Page')
+app.get('/menu', (reg, res) => {
+    res.render('menuPage.ejs', {
+        menu: menu
+    })
 })
 
 app.listen(PORT, () => {
