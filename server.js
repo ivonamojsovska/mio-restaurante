@@ -11,7 +11,8 @@ app.get('/company-history', (reg, res) => {
 })
 //past work row
 app.get('/locations', (reg, res) => {
-    res.send('Locations')
+    // res.send('Locations')
+	res.render('locations.ejs')
 })
 app.get('/staff-page', (reg, res) => {
     res.send('Staff Page')
