@@ -11,8 +11,8 @@ app.use(express.static("public"))
 app.get('/', (req, res) => {
     res.render('homePage.ejs');
 })
-app.get('/company-history', (reg, res) => {
-    res.send('Company History')
+app.get('/history', (reg, res) => {
+    res.render('companyHistory.ejs')
 })
 //past work row
 app.get('/locations', (reg, res) => {
@@ -21,12 +21,12 @@ app.get('/locations', (reg, res) => {
 
     })
 })
-app.get('/staffpage', (reg, res) => {
+app.get('/staff', (reg, res) => {
     res.render('staffPage.ejs', {
         staff: staff
     })
 })
-app.get('/contactpage', (reg, res) => {
+app.get('/contact', (reg, res) => {
     res.render('contactPage.ejs')
 })
 app.get('/menu', (reg, res) => {
