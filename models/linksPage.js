@@ -1,3 +1,3 @@
 const linksPage = [{
-    "platform": "instagram"
+    platform: "instagram"
 }]

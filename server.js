@@ -1,7 +1,11 @@
-const express = require('express');
+const express = require('express')
 const app = express();
+const locations = require('./models/locations.js')
+const staff = require('./models/staffPage')
 
 let PORT = 3000;
+
+app.use(express.static("public"))
 
 app.get('/', (req, res) => {
     res.render('homePage.ejs');
@@ -11,14 +15,18 @@ app.get('/company-history', (reg, res) => {
 })
 //past work row
 app.get('/locations', (reg, res) => {
-    // res.send('Locations')
-	res.render('locations.ejs')
+    res.render('locations.ejs', {
+        ourLocation: locations
+
+    })
 })
-app.get('/staff-page', (reg, res) => {
-    res.send('Staff Page')
+app.get('/staffpage', (reg, res) => {
+    res.render('staffPage.ejs', {
+        staff: staff
+    })
 })
-app.get('/contact-page', (reg, res) => {
-    res.send('Contact Page')
+app.get('/contactpage', (reg, res) => {
+    res.render('contactPage.ejs')
 })
 app.get('/links-page', (reg, res) => {
     res.send('Links Page')
